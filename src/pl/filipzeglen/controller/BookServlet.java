@@ -25,7 +25,7 @@ public class BookServlet extends HttpServlet {
         String description = request.getParameter("description");
         String option = request.getParameter("option");
         try {
-            DaoFactory factory = DaoFactory.getDAOFactory(DaoFactory.MYSQL_DAO);
+            DaoFactory factory = DaoFactory.getDaoFactory(DaoFactory.MYSQL_DAO);
             BookDao dao = factory.getBookDao();
             Book book = null;
             String operation = null;
